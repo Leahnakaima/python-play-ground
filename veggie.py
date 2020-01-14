@@ -16,8 +16,11 @@ import csv
 
 with open('vegetables.csv', 'w') as f:
 	writer = csv.writer(f)
-	writer.writerow(['name', 'color'])
+	writer.writerow(['name', 'color', 'length'])
 	for x in vegetables:
 		name = x["name"]
 		color = x["color"]
-		writer.writerow([name, color])
+		length = len(name)
+		writer.writerow([name, color, length])
+
+
